@@ -23,17 +23,17 @@ function Post({
         <div className='post__header'>
             <div className='post__headerText'>
                 <h3>
-                    Rafeh Qazi 
+                    {displayName} 
                     <span className='post__headerSpecial'>
-                        <GoVerified  className='post__badge'/> @cleverProgrammer
+                        {verified && <GoVerified  className='post__badge'/>} {username}
                     </span>
                 </h3>
             </div>
             <div className='post__headerDescription'>
-                <p>I challenge you to build a twitter clone</p>
+                <p>{text}</p>
             </div>
         </div>
-        <img src='https://media3.giphy.com/media/65ATdpi3clAdjomZ39/giphy.gif' alt='GIP'/>
+        <img src={image} alt='GIP'/>
         <div className='post__footer'>
             <BsRepeat className='post__icon'/>
             <MdOutlineFavoriteBorder className='post__icon'/>
